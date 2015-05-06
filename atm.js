@@ -1,20 +1,21 @@
 $(document).ready(function(){ 
 
-var firstInput = [];
-var regAccountDisplay = [];
+var firstInput = 0;
+var secondInput = 0;
+var regAccountDisplay = 0;
 var inputAmountSave = [];
 var saveAccountDisplay = [];
 
 
 
-$('#deposit1').on('click', function(){
+  $('#deposit1').on('click', function(){
     // $('#amount1').val();
-  $('#balance1').html($('#amount1').val());
+    $('#balance1').html($('#amount1').val());
   firstInput = Number($('#balance1').text());
   });
 
   $('#deposit2').on('click', function(){
-    $('#balance2').html("$" + $('#amount2').val());
+    $('#balance2').html($('#amount2').val());
   });
 
 
@@ -22,6 +23,9 @@ $('#deposit1').on('click', function(){
 
   $('#withdraw1').on('click', function(){
     $('#balance1').html($('#amount1').val());
+    secondInput = Number($('#balance1').text());{
+    console.log(firstInput-secondInput);
+    }
   });
 
   
@@ -32,40 +36,6 @@ $('#deposit1').on('click', function(){
 
 
 }); 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
