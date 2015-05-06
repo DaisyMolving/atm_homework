@@ -1,7 +1,6 @@
 $(document).ready(function(){ 
 
-var firstInput = 0;
-var secondInput = 0;
+var firstInput = [];
 var regAccountDisplay = [];
 var inputAmountSave = [];
 var saveAccountDisplay = [];
@@ -22,11 +21,10 @@ $('#deposit1').on('click', function(){
 
 
   $('#withdraw1').on('click', function(){
-  if (firstInput === "0") {
-    console.log("oops");
-  } else {secondInput = Number($('#balance1'));
-console.log(secondInput - firstInput);}
+    $('#balance1').html($('#amount1').val());
   });
+
+  
 
    $('#withdraw2').on('click', function(){
     console.log(Number($('#amount2')[0]) - Number($('#amount2')[1]));
