@@ -1,8 +1,9 @@
 $(document).ready(function(){ 
 
-var firstInput = 0;
-var secondInput = 0;
-var regAccountDisplay = 0;
+var firstRegInput = 0;
+var secondRegInput = 0;
+var firstSaveInput = 0;
+var secondSaveInput = 0;
 var inputAmountSave = [];
 var saveAccountDisplay = [];
 
@@ -11,11 +12,12 @@ var saveAccountDisplay = [];
   $('#deposit1').on('click', function(){
     // $('#amount1').val();
     $('#balance1').html($('#amount1').val());
-  firstInput = Number($('#balance1').text());
+  firstRegInput = Number($('#balance1').text());
   });
 
   $('#deposit2').on('click', function(){
     $('#balance2').html($('#amount2').val());
+    firstSaveInput = Number($('#balance2').text());
   });
 
 
@@ -23,17 +25,19 @@ var saveAccountDisplay = [];
 
   $('#withdraw1').on('click', function(){
     $('#balance1').html($('#amount1').val());
-    secondInput = Number($('#balance1').text());{
-    console.log(firstInput-secondInput);
+    secondRegInput = Number($('#balance1').text());{
+    console.log("$" + (firstRegInput-secondRegInput));
     }
   });
 
   
 
    $('#withdraw2').on('click', function(){
-    console.log(Number($('#amount2')[0]) - Number($('#amount2')[1]));
+    $('#balance2').html($('#amount2').val());
+    secondSaveInput = Number($('#balance2').text());{
+    console.log("$" + (firstSaveInput-secondSaveInput));
+    }
   });
-
 
 }); 
 
